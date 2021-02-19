@@ -31,5 +31,5 @@ client.on('message', message => {
 		}
     });
 });
-
-client.login('Nzg5NzIwODkzODgxMzE5NDQ0.X92K5Q.G6iewACGuDIvcXpjJftnQURgKmM');
+const token = process.argv.slice(2)[0]
+client.login(token);
