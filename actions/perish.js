@@ -1,7 +1,8 @@
+const triggers = ['perish', 'then perish'];
+
 module.exports = {
     check(message) {
-        var teehee = message.content.toLowerCase()
-        return (teehee.includes('perish') || teehee.includes('then perish'))
+        return triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
         message.channel.send('m-mr. obawma')

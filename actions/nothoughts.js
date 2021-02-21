@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
 
+const triggers = ['no thoughts head empty', 'no thoughts'];
+
 module.exports = {
     check(message) {
-        var teehee = message.content.toLowerCase();
-        return teehee.includes('no thoughts head empty') || teehee.includes('no thoughts');
+        return triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
         const file = new Discord.MessageAttachment(__dirname + '/../pics/nothoughts.jpg');

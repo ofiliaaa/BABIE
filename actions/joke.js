@@ -1,7 +1,8 @@
+const triggers = ['it was a joke', 'its a joke', 'thats a joke', 'that was a joke'];
+
 module.exports = {
     check(message) {
-        var teehee = message.content.toLowerCase();
-        return (teehee.includes('it was a joke') || teehee.includes('its a joke') || teehee.includes('thats a joke') || teehee.includes('that was a joke'))
+        return triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
         message.channel.send('haha funny :neutral_face:')

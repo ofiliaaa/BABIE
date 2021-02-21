@@ -1,7 +1,9 @@
+const triggers = ['ofilia', 'ofiiia', '0filia'];
+
 module.exports = {
     check(message) {
         var words = message.content.toLowerCase().split(' ');
-        return (words.includes('ofilia') || words[0] === ('ofilia') || words.includes('ofiiia'))
+        return words.filter(w => triggers.includes(w)).length > 0;
     },
     execute(message) {
         message.channel.send('i think you mean king of swag and master of comedy')

@@ -4,7 +4,7 @@ const images = 12;
 module.exports = {
     check(message) {
         var words = message.content.toLowerCase().split(' ')
-        return words.includes('b!spunch');
+        return words[0] === 'b!spunch';
     },
     execute(message) {
         var choice = Math.round(Math.random() * images);

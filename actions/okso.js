@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
 
+const triggers = ['story time', 'ok so'];
+
 module.exports = {
     check(message) {
-        var teehee = message.content.toLowerCase();
-        return teehee.includes('story time');
+        return triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
         const file = new Discord.MessageAttachment(__dirname + '/../pics/okso.jpg');

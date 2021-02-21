@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 
+const triggers = ['dont test me', 'dont try me'];
+
 module.exports = {
     check(message) {
         var words = message.content.toLowerCase().split(' ');
-        var teehee = message.content.toLowerCase();
-        return words[0] === ('b!cranky') || teehee.includes('dont test me') || teehee.includes('dont try me');
+        return words[0] === ('b!cranky') || triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
         const file = new Discord.MessageAttachment(__dirname + '/../pics/cranky.jpg');

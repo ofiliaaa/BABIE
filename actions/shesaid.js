@@ -13,8 +13,7 @@ const triggers = [
 
 module.exports = {
     check(message) {
-        var teehee = message.content.toLowerCase()
-        return triggers.filter(trigger => teehee.includes(trigger)).length > 0
+        return triggers.filter(t => message.content.toLowerCase().replace(/\W/g, '') === t).length > 0
     },
     execute(message) {
         message.channel.send('thats what she said')
