@@ -2,7 +2,7 @@ const triggers = ['am sleepy', 'im sleepy'];
 
 module.exports = {
     check(message) {
-        var words = message.content.toLowerCase().split(' ');
+        var words = message.content.toLowerCase().split(' ').filter(w => w);
         return words[0] === 'n!sleepy'
             || words.filter(w =>
                 w.split('')
