@@ -16,4 +16,5 @@ module.exports = {
         const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/bbg/${filesList[random]}`));
         message.channel.send({ files: [file] });
     }
+    
 }
