@@ -5,10 +5,10 @@ module.exports = {
         var words = message.content.toLowerCase().split(' ').filter(w => w);
         return words[0] === 'n!sleepy'
             || words.filter(w =>
-                w.split('')
+                (w.split('')
                 .filter(c =>
                     c === 'z'
-                ).length === w.length
+                ).length === w.length && w.length>= 3)
             ).length > 0
             || triggers.filter(t =>
                 message.content
