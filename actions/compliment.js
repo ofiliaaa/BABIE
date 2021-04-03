@@ -5,15 +5,15 @@ const path = require('path');
 module.exports = {
     check(message) {
         var words = message.content.toLowerCase().split(' ')
-        return words[0] === 'b!kiss';
+        return words[0] === 'b!compliment';
     },
     execute(message) {
         const filesList = fs.readdirSync(
-            path.resolve(`${__dirname}/../pics/kiss/`)
+            path.resolve(`${__dirname}/../pics/compliment/`)
         );
         const random = Math.round(Math.random() * (filesList.length - 1));
 
-        const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/kiss/${filesList[random]}`));
+        const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/compliment/${filesList[random]}`));
         message.channel.send({ files: [file] });
     }
 }
