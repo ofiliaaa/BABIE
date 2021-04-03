@@ -6,7 +6,7 @@ const triggers = ['i plead the second']
 module.exports = {
     check(message) {
         var words = message.content.toLowerCase().split(' ')
-        return words[0] === 'bbgun' || triggers.includes(message.content.toLowerCase().replace(/\W\s/g, '').replace(/[.,/()[]#!$%^&?*;:{}=-_'`~&]/g,""));
+        return words[0] === 'bbgun' || triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
         const filesList = fs.readdirSync(
