@@ -5,6 +5,6 @@ module.exports = {
         return triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
-        message.channel.send('i see the medicine')
+        message.channel.send('you see the medicine')
     }
 }
