@@ -6,7 +6,7 @@ const haiku = [
     'bring back mount garfield, love that big fact orange cat, he sure hates mondays',
     'aaa italians, mama mia pizza pie, cooka da meatball', 
     'battleblock theater, everybody needs to play, *sings* buckle your pants',
-    'oh no jones is ts, try your best to run, you will not escape (written by Jones)',
+    'oh no jones is ts, try your best to run away, you will not escape (written by Jones)',
     'sydney may protest, but i think its obvious: animal fetish (written by jones)',
     'oh was that a yawn, someone should head straight to sleep, but you likely wont (written by jones)',
     'little slimy slug, hes so squishy what a king, dont you dare salt him',
