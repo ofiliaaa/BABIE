@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+const path = require('path');
 const triggers = ['shut up','stfu'];
 
 module.exports = {
