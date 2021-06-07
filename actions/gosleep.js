@@ -1,15 +1,19 @@
 const Discord = require('discord.js');
-
-const triggers = ['go to sleep', 'go to bed'];
-
+const fs = require('fs');
+const path = require('path');
+const triggers = ['go to sleep','go to bed']
 module.exports = {
     check(message) {
         var words = message.content.toLowerCase().split(' ')
-        var teehee = message.content.toLowerCase();
-        return words[0] === ('b!sleep') || triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
+        return words[0] === 'b!sleep' ||  triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
-        const file = new Discord.MessageAttachment(__dirname + '/../pics/gosleep.jpg');
+        const filesList = fs.readdirSync(
+            path.resolve(`${__dirname}/../pics/gtb/`)
+        );
+        const random = Math.round(Math.random() * (filesList.length - 1));
+
+        const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/gtb/${filesList[random]}`));
         message.channel.send({ files: [file] });
     }
 }
