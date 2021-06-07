@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-
+const fs = require('fs');
 const triggers = ['yeah'];
 
 module.exports = {
