@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     check(message) {
-        return message.content.toLowerCase() === 'goodnight' || message.content.toLowerCase() === 'goodmorning'
+        return message.content.toLowerCase() === 'goodnight' || message.content.toLowerCase() === 'good morning'
     },
     execute(message) {
         let file 
