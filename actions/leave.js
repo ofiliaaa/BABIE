@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
 
+const triggers = ['leave', 'get out'];
+
 module.exports = {
     check(message) {
-        var words = message.content.toLowerCase().split(' ');
-        return words[0] === ('leave');
+        return triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
         const file = new Discord.MessageAttachment(__dirname + '/../pics/leave.jpg');
