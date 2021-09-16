@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-const triggers = ['huh???','huh?','huh?!','huh!?','ayo?','ayo????','ayo?!','ayo!?'];
+const triggers = ['huh???','huh?','huh?!','huh!?','ayo?','ayo???','ayo?!','ayo!?'];
 
 module.exports = {
     check(message) {
