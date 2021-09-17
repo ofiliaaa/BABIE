@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
-
-const triggers = ['toughtalk'];
+const fs = require('fs');
+const path = require('path');
+const triggers = ['tough talk'];
 
 module.exports = {
     check(message) {
@@ -15,5 +16,4 @@ module.exports = {
         const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/toughtalk/${filesList[random]}`));
         message.channel.send({ files: [file] });
     }
-    
 }
