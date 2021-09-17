@@ -7,7 +7,13 @@ module.exports = {
         return triggers.includes(message.content.toLowerCase().replace(/\W\s/g, ''));
     },
     execute(message) {
-        const file = new Discord.MessageAttachment(__dirname + '/../pics/toughtalk.jpg');
+        const filesList = fs.readdirSync(
+            path.resolve(`${__dirname}/../pics/toughtalk/`)
+        );
+        const random = Math.round(Math.random() * (filesList.length - 1));
+
+        const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/toughtalk/${filesList[random]}`));
         message.channel.send({ files: [file] });
     }
+    
 }

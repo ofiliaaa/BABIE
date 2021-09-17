@@ -5,6 +5,7 @@ const links = [
     ['wednesday', 'wednesday.jpg'],
     ['thursday', 'thuday.jpg'],
     ['friday', 'friday.jpg'],
+    ['sunday', 'sunday.jpg']
 ];
 
 module.exports = {
