@@ -11,7 +11,7 @@ module.exports = {
         .replace(/\W\s/g, ''))
     },
     execute(message) {
-        const file = new Discord.MessageAttachment(__dirname + '/../pics/insane.jpg');
+        const file = new Discord.MessageAttachment(__dirname + '/../pics/hehe.jpg');
         message.channel.send({ files: [file] });
     }
 }
