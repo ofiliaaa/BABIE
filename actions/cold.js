@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const triggers = ['tough talk'];
+const triggers = ['its so cold','im so cold','its so cold here','its so cold out','its cold out','im cold','its cold here'];
 
 module.exports = {
     check(message) {
@@ -9,11 +9,11 @@ module.exports = {
     },
     execute(message) {
         const filesList = fs.readdirSync(
-            path.resolve(`${__dirname}/../pics/toughtalk/`)
+            path.resolve(`${__dirname}/../pics/cold/`)
         );
         const random = Math.round(Math.random() * (filesList.length - 1));
 
-        const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/toughtalk/${filesList[random]}`));
+        const file = new Discord.MessageAttachment(path.resolve(`${__dirname}/../pics/cold/${filesList[random]}`));
         message.channel.send({ files: [file] });
     }
 }
