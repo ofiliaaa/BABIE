@@ -3,7 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     check(message) {
-        message = message.content.toLowerCase().replace(/[\u0300-\u036F]/g, "")
+        message = message.content.toLowerCase()
+        .replace(/[\u0300-\u036F]/g, "")
         .replace(/[\u2018\u2019]/g, "")
         .replace(/[\u201C\u201D]/g, "")
         .replace(/[']/g,"")
