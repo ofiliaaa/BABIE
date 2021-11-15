@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-const triggers = ['on baby'];
+const triggers = ['silence bottom'];
 
 module.exports = {
     check(message) {
@@ -12,7 +12,7 @@ module.exports = {
         .replace(/\W\s/g, ''))
     },
     execute(message) {
-        const file = new Discord.MessageAttachment(__dirname + '/../pics/onbaby.jpg');
+        const file = new Discord.MessageAttachment(__dirname + '/../pics/silence.jpg');
         message.channel.send({ files: [file] });
     }
 }

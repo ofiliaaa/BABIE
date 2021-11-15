@@ -1,9 +1,15 @@
 const Discord = require('discord.js');
 
+const triggers = ['tiddies'];
+
 module.exports = {
     check(message) {
-        var words = message.content.toLowerCase().split(' ');
-        return words[0] === 'tiddies';
+        return triggers.includes(message.content.toLowerCase()
+        .replace(/[\u0300-\u036F]/g, "")
+        .replace(/[\u2018\u2019]/g, "")
+        .replace(/[\u201C\u201D]/g, "")
+        .replace(/[']/g,"")
+        .replace(/\W\s/g, ''))
     },
     execute(message) {
         const file = new Discord.MessageAttachment(__dirname + '/../pics/tiddies.jpg');
