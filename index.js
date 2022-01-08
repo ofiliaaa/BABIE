@@ -31,5 +31,4 @@ client.on('message', message => {
 		}
     });
 });
-const token = process.argv.slice(2)[0]
-client.login(token);
+client.login(process.env.DISCORD_TOKEN);
