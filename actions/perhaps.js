@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const triggers = ['prehaps','mayhaps','is that a challenge'];
+const triggers = ['perhaps','mayhaps','is that a challenge'];
 
 module.exports = {
     check(message) {
